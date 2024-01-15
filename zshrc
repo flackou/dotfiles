@@ -70,3 +70,17 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/usr/local/share/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/share/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/usr/local/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/share/google-cloud-sdk/completion.zsh.inc'; fi
+
+# GCP Service Account
+# https://github.com/lewagon/data-setup/blob/master/macOS.md#create-a-service-account-key-
+export GOOGLE_APPLICATION_CREDENTIALS=/Users/jlestavel/code/flackou/le-wagon-gcp-service-account-411310-4793e2ccb428.json
+
+# direnv
+# https://github.com/lewagon/data-setup/blob/master/macOS.md#direnv
+eval "$(direnv hook zsh)"
